@@ -1,0 +1,10 @@
+["protostar.config"]
+protostar_version = "0.4.2"
+
+["protostar.project"]
+libs_path = "lib"
+
+["protostar.contracts"]
+ERC721ex01 = [
+    "/home/nadai/Nadai Cairo-ERC721 Starknet/starknet-erc721/contracts/Solución/ERC721ex01.cairo",
+]
