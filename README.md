@@ -228,7 +228,7 @@ starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --netwo
 - **Nadai con Soluciones [Ejercio 5](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex05.md)**
 
 
-### Ejercio 6 - Reclamación de un NFT
+### Ejercicio 6 - Reclamación de un NFT
 
 - Mint un NFT con metadatos en [este dummy ERC721 token](contracts/token/ERC721/TDERC721_metadata.cairo), utilizable [aquí](https://goerli.voyager.online/contract/0x4fc25c4aca3a8126f9b386f8908ffb7518bc6fefaa5c542cd538655827f8a21).
 - Compruébalo en [Aspect](https://testnet.aspect.co/).
@@ -280,11 +280,11 @@ Si da error pruebe:
   1278752977803006783537
   ```
 
-### Comprobando tu progreso y contando tus puntos S
+### Comprobando tu progreso y contando tus puntos 
 
 Sus puntos se acreditarán en su billetera; aunque esto puede tomar algún tiempo. Si desea monitorear su conteo de puntos en tiempo real, ¡también puede ver su saldo en voyager!
 
-- ​Vaya al contador [ERC20 counter](https://goerli.voyager.online/contract/0xa0b943234522049dcdbd36cf9d5e12a46be405d6b8757df2329e6536b40707#readContract)] en voyager, en la pestaña "leer contrato"
+- ​Vaya al contador [ERC20 counter](https://goerli.voyager.online/contract/0xa0b943234522049dcdbd36cf9d5e12a46be405d6b8757df2329e6536b40707#readContract) en voyager, en la pestaña "leer contrato"
 - Ingrese su dirección en decimal en la función "balanceOf" 
 
 También puede consultar su progreso general [aquí](https://starknet-tutorials.vercel.app).
