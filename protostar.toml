@@ -5,6 +5,6 @@ protostar_version = "0.4.2"
 libs_path = "lib"
 
 ["protostar.contracts"]
-ERC721ex01 = [
-    "/home/nadai/Nadai Cairo-ERC721 Starknet/starknet-erc721/contracts/Solución/ERC721ex01.cairo",
+ERC721ex02 = [
+    "/home/nadai/Nadai Cairo-721 Starknet Edu/contracts/Solución/ERC721ex02.cairo",
 ]

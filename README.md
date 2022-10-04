@@ -181,7 +181,7 @@ starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --netwo
 
 - Llame a [`ex2a_get_animal_rank()`](contracts/Evaluator.cairo#L245) para que le asignen una criatura aleatoria para crear. 
 - Lea las características esperadas de su animal del Evaluador 
-- Cree las herramientas necesarias para registrar las características de los animales en su contrato y permita que el contrato del evaluador las recupere a través de la función `get_animal_characteristics` en su contrato ([marque esto](contracts/IExerciseSolution.cairo)) 
+- Cree las herramientas necesarias para registrar las características de los animales en su contrato y permita que el contrato del evaluador las recupere a través de la función `get_animal_characteristics` en su contrato [marque esto](contracts/IExerciseSolution.cairo)
 - Implementa tu nuevo contrato 
 - Acuñar el animal con las características deseadas y entregarlo al evaluador 
 - Llame [`submit_exercise()`](contracts/Evaluator.cairo#L601) en el Evaluador para configurar el contrato que desea evaluar 
