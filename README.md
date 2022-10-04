@@ -173,9 +173,9 @@ starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --netwo
 - Llame a [`submit_exercise()`](contracts/Evaluator.cairo#L601) en el Evaluador para configurar el contrato que desea evaluar (4 pts) 
 - Llame a [`ex1_test_erc721()`](contracts/Evaluator.cairo#L146) en el evaluador para recibir sus puntos (2 pts)
 
-
-- **Nadai con Soluciones [Ejercio 1](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex01.md)**
-
+--------------
+- **Nadai con Soluciones [Ejercicio 1](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex01.md)**
+--------------
 
 ### Ejercicio 2: Creación de atributos de token 
 
@@ -187,9 +187,9 @@ starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --netwo
 - Llame [`submit_exercise()`](contracts/Evaluator.cairo#L601) en el Evaluador para configurar el contrato que desea evaluar 
 - Llame a [`ex2b_test_declare_animal()`](contracts/Evaluator.cairo#L258) para recibir puntos (2 pts)
 
-
-- **Nadai con Soluciones [Ejercio 2](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex02.md)**
-
+-------------
+- **Nadai con Soluciones [Ejercicio 2](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex02.md)**
+--------------
 
 ### Ejercicio 3: Acuñación de NFT 
 
@@ -198,9 +198,9 @@ starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --netwo
 - Llame a [`submit_exercise()`](contracts/Evaluator.cairo#L601) en el Evaluador para configurar el contrato que desea evaluar 
 - Llame a [`ex3_declare_new_animal()`](contracts/Evaluator.cairo#L272) para obtener puntos (2 puntos)
 
-
-- **Nadai con Soluciones [Ejercio 3](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex03.md)**
-
+-------------
+- **Nadai con Soluciones [Ejercicio 3](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex03.md)**
+-------------
 
 ### Ejercicio 4 - Quema de NFT 
 
@@ -209,9 +209,9 @@ starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --netwo
 - Llame a [`submit_exercise()`](contracts/Evaluator.cairo#L601) en el Evaluador para configurar el contrato que desea evaluar 
 - Llame a [`ex4_declare_dead_animal()`](contracts/Evaluator.cairo#L323) para obtener puntos (2 puntos) 
 
-
-- **Nadai con Soluciones [Ejercio 4](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex04.md)**
-
+-----------
+- **Nadai con Soluciones [Ejercicio 4](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex04.md)**
+----------
 
 ### Ejercicio 5 - Adición de permisos y pagos 
 
@@ -224,9 +224,9 @@ starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --netwo
 - Llame a [`submit_exercise()`](contracts/Evaluator.cairo#L601) en el Evaluador para configurar el contrato que desea evaluar 
 - Llame a [`ex5b_register_breeder()`](contracts/Evaluator.cairo#L440) para probar que su función funciona. Si es necesario, envíe tokens ficticios primero al evaluador (2 puntos)
 
-
-- **Nadai con Soluciones [Ejercio 5](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex05.md)**
-
+---------------------
+- **Nadai con Soluciones [Ejercicio 5](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex05.md)**
+-----------------
 
 ### Ejercicio 6 - Reclamación de un NFT
 
@@ -234,9 +234,9 @@ starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --netwo
 - Compruébalo en [Aspect](https://testnet.aspect.co/).
 - Reclamar puntos en `ex6_claim_metadata_token`](contracts/Evaluator.cairo#L523). (2 puntos) 
 
-
-- **Nadai con Soluciones [Ejercio 6](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex06.md)**
-
+------------------
+- **Nadai con Soluciones [Ejercicio 6](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex06.md)**
+-------------------
 
 ### Ejercicio 7 - Adición de metadatos 
 
@@ -248,9 +248,9 @@ starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --netwo
 - Llame a [`submit_exercise()`](contracts/Evaluator.cairo#L601) en el Evaluador para configurar el contrato que desea evaluar 
 - Reclamar puntos en [`ex7_add_metadata`](contracts/Evaluator.cairo#L557) (2 puntos)
 
-
-- **Nadai con Soluciones [Ejercio 7](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex07.md)**
-
+------------------
+- **Nadai con Soluciones [Ejercicio 7](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex07.md)**
+------------------
 
 
 ## ​Anexo - Herramientas útiles 
