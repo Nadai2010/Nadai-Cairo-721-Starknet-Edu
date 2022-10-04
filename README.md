@@ -176,6 +176,7 @@ starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --netwo
 
 - **Nadai con Soluciones [Ejercio 1](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex01.md)**
 
+
 ### Ejercicio 2: Creación de atributos de token 
 
 - Llame a [`ex2a_get_animal_rank()`](contracts/Evaluator.cairo#L245) para que le asignen una criatura aleatoria para crear. 
@@ -186,6 +187,10 @@ starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --netwo
 - Llame [`submit_exercise()`](contracts/Evaluator.cairo#L601) en el Evaluador para configurar el contrato que desea evaluar 
 - Llame a [`ex2b_test_declare_animal()`](contracts/Evaluator.cairo#L258) para recibir puntos (2 pts)
 
+
+- **Nadai con Soluciones [Ejercio 2](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex02.md)**
+
+
 ### Ejercicio 3: Acuñación de NFT 
 
 - Crear una función para permitir a los criadores acuñar nuevos animales con las características especificadas 
@@ -193,12 +198,20 @@ starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --netwo
 - Llame a [`submit_exercise()`](contracts/Evaluator.cairo#L601) en el Evaluador para configurar el contrato que desea evaluar 
 - Llame a [`ex3_declare_new_animal()`](contracts/Evaluator.cairo#L272) para obtener puntos (2 puntos)
 
+
+- **Nadai con Soluciones [Ejercio 3](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex03.md)**
+
+
 ### Ejercicio 4 - Quema de NFT 
 
 - Cree una función para permitir que los criadores declaren animales muertos (quemar el NFT)
 - Implementa tu nuevo contrato 
 - Llame a [`submit_exercise()`](contracts/Evaluator.cairo#L601) en el Evaluador para configurar el contrato que desea evaluar 
 - Llame a [`ex4_declare_dead_animal()`](contracts/Evaluator.cairo#L323) para obtener puntos (2 puntos) 
+
+
+- **Nadai con Soluciones [Ejercio 4](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex04.md)**
+
 
 ### Ejercicio 5 - Adición de permisos y pagos 
 
@@ -212,32 +225,42 @@ starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --netwo
 - Llame a [`ex5b_register_breeder()`](contracts/Evaluator.cairo#L440) para probar que su función funciona. Si es necesario, envíe tokens ficticios primero al evaluador (2 puntos)
 
 
-### Exercise 6 - Claiming an NFT
+- **Nadai con Soluciones [Ejercio 5](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex05.md)**
 
-- Mint a NFT with metadata on [this dummy ERC721 token](contracts/token/ERC721/TDERC721_metadata.cairo) , usable [here](https://goerli.voyager.online/contract/0x4fc25c4aca3a8126f9b386f8908ffb7518bc6fefaa5c542cd538655827f8a21)
-- Check it on [Aspect](https://testnet.aspect.co/)
-- Claim points on [`ex6_claim_metadata_token`](contracts/Evaluator.cairo#L523) (2 pts)
 
-### Exercise 7 - Adding metadata
+### Ejercio 6 - Reclamación de un NFT
 
-- Create a new ERC721 contract that supports metadata. You can use [this contract](contracts/token/ERC721/ERC721_metadata.cairo) as a base
-- The base token URI is the chosen IPFS gateway
-- You can upload your NFTs directly on [this website](https://www.pinata.cloud/)
-- Your tokens should be visible on [Aspect](https://testnet.aspect.co/) once minted!
-- Deploy your new contract
-- Call [`submit_exercise()`](contracts/Evaluator.cairo#L601) in the Evaluator to configure the contract you want evaluated
-- Claim points on [`ex7_add_metadata`](contracts/Evaluator.cairo#L557) (2 pts)
+- Mint un NFT con metadatos en [este dummy ERC721 token](contracts/token/ERC721/TDERC721_metadata.cairo), utilizable [aquí](https://goerli.voyager.online/contract/0x4fc25c4aca3a8126f9b386f8908ffb7518bc6fefaa5c542cd538655827f8a21).
+- Compruébalo en [Aspect](https://testnet.aspect.co/).
+- Reclamar puntos en `ex6_claim_metadata_token`](contracts/Evaluator.cairo#L523). (2 puntos) 
 
-​
 
-## Annex - Useful tools
+- **Nadai con Soluciones [Ejercio 6](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex06.md)**
 
-### Converting data to and from decimal
 
-To convert data to felt use the [`utils.py`](utils.py) script
-To open Python in interactive mode after running script
+### Ejercicio 7 - Adición de metadatos 
 
-  ```bash
+- Cree un nuevo contrato ERC721 que admita metadatos. Puedes usar [este contrato](contracts/token/ERC721/ERC721_metadata.cairo) como base 
+- El URI del token base es la puerta de enlace IPFS elegida.
+- Puede cargar sus NFT directamente en [este website](https://www.pinata.cloud/)
+- ¡Tus tokens deberían ser visibles en [Aspect](https://testnet.aspect.co/) una vez acuñados! 
+- Implementa tu nuevo contrato 
+- Llame a [`submit_exercise()`](contracts/Evaluator.cairo#L601) en el Evaluador para configurar el contrato que desea evaluar 
+- Reclamar puntos en [`ex7_add_metadata`](contracts/Evaluator.cairo#L557) (2 puntos)
+
+
+- **Nadai con Soluciones [Ejercio 7](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex07.md)**
+
+
+
+## ​Anexo - Herramientas útiles 
+
+### Conversión de datos a y desde decimal 
+
+Para convertir datos en fieltro, use el script [`utils.py`](utils.py).
+Para abrir Python en modo interactivo después de ejecutar el script.
+
+```bash
   python -i utils.py
   ```
 
@@ -246,28 +269,29 @@ To open Python in interactive mode after running script
   1278752977803006783537
   ```
 
-### Checking your progress & counting your points
+Si da error pruebe:
 
-​
-Your points will get credited in your wallet; though this may take some time. If you want to monitor your points count in real time, you can also see your balance in voyager!
-​
+```bash
+  python3 -i utils.py
+  ```
 
-- Go to the  [ERC20 counter](https://goerli.voyager.online/contract/0xa0b943234522049dcdbd36cf9d5e12a46be405d6b8757df2329e6536b40707#readContract)  in voyager, in the "read contract" tab
-- Enter your address in decimal in the "balanceOf" function
+  ```python
+  >>> str_to_felt('ERC20-101')
+  1278752977803006783537
+  ```
 
-You can also check your overall progress [here](https://starknet-tutorials.vercel.app)
-​
+### Comprobando tu progreso y contando tus puntos S
 
-### Transaction status
+Sus puntos se acreditarán en su billetera; aunque esto puede tomar algún tiempo. Si desea monitorear su conteo de puntos en tiempo real, ¡también puede ver su saldo en voyager!
 
-​
-You sent a transaction, and it is shown as "undetected" in voyager? This can mean two things:
-​
+- ​Vaya al contador [ERC20 counter](https://goerli.voyager.online/contract/0xa0b943234522049dcdbd36cf9d5e12a46be405d6b8757df2329e6536b40707#readContract)] en voyager, en la pestaña "leer contrato"
+- Ingrese su dirección en decimal en la función "balanceOf" 
 
-- Your transaction is pending, and will be included in a block shortly. It will then be visible in voyager.
-- Your transaction was invalid, and will NOT be included in a block (there is no such thing as a failed transaction in StarkNet).
-​
-You can (and should) check the status of your transaction with the following URL  [https://alpha4.starknet.io/feeder_gateway/get_transaction_receipt?transactionHash=](https://alpha4.starknet.io/feeder_gateway/get_transaction_receipt?transactionHash=)  , where you can append your transaction hash.
-​
+También puede consultar su progreso general [aquí](https://starknet-tutorials.vercel.app).
 
-​
+### Estado de la transacción
+
+¿Envió una transacción y se muestra como "no detectada" en voyager? Esto puede significar dos cosas: 
+
+- Su transacción está pendiente y se incluirá en un bloque en breve. Entonces será visible en Voyager. 
+- Su transacción no fue válida y NO se incluirá en un bloque (no existe una transacción fallida en StarkNet). Puede (y debe) verificar el estado de su transacción con la siguiente URL [https://alpha4.starknet.io/feeder_gateway/get_transaction_receipt?transactionHash=](https://alpha4.starknet.io/feeder_gateway/get_transaction_receipt?transactionHash=), donde puede agregar el hash de su transacción.​
