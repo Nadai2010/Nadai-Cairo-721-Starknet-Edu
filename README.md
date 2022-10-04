@@ -1,34 +1,30 @@
-# ERC721 on StarkNet
+# Tutorial Nadai ERC721 on StarkNet
 
-Welcome! This is an automated workshop that will explain how to deploy an ERC721 token on StarkNet and customize it to perform specific functions. The ERC721 standard is described [here](https://docs.openzeppelin.com/contracts/3.x/api/token/erc721).
-It is aimed at developers that:
+¡Bienvenidos! Este es un taller automatizado que explicará cómo implementar un token ERC721 en StarkNet y personalizarlo para realizar funciones específicas. El estándar ERC721 se describe [aquí](https://docs.openzeppelin.com/contracts/3.x/api/token/erc721). Está dirigido a desarrolladores que: 
 
-- Understand Cairo syntax
-- Understand the ERC721 token standard
-​
-​
+- Comprender la sintaxis de Cairo 
+- Comprender el estándar de token ERC721 .
 
-## Introduction
+## Introducción
 
 ### Disclaimer
 
+No espere ningún tipo de beneficio al usar esto, aparte de aprender un montón de cosas interesantes sobre StarkNet, el primer paquete acumulativo de validez de propósito general en Ethereum Mainnet. 
+
+StarkNet todavía está en Alfa. Esto significa que el desarrollo está en curso y que la pintura no está seca en todas partes. Las cosas mejorarán y, mientras tanto, ¡hacemos que las cosas funcionen con un poco de cinta adhesiva aquí y allá! 
+
+### ¿Cómo funciona?
+
+El objetivo de este tutorial es personalizar e implementar un contrato ERC721 en StarkNet. Su progreso será verificado por un contrato de [evaluator contract](contracts/Evaluator.cairo), implementado en StarkNet, que le otorgará puntos en forma de [ERC20 tokens](contracts/token/ERC20/TDERC20.cairo).
+
+Cada ejercicio requerirá que agregue funcionalidad a su token ERC721. 
+
+Para cada ejercicio, deberá escribir una nueva versión en su contrato, implementarlo y enviarlo al evaluador para su corrección. 
+
+### ¿Dónde estoy? 
+
+Este taller es el segundo de una serie destinada a enseñar cómo construir en StarkNet. Echa un vistazo a lo siguiente:
 ​
-Don't expect any kind of benefit from using this, other than learning a bunch of cool stuff about StarkNet, the first general purpose validity rollup on the Ethereum Mainnet.
-​
-StarkNet is still in Alpha. This means that development is ongoing, and the paint is not dry everywhere. Things will get better, and in the meanwhile, we make things work with a bit of duct tape here and there!
-​
-
-### How it works
-
-The goal of this tutorial is for you to customize and deploy an ERC721 contract on StarkNet. Your progress will be check by an [evaluator contract](contracts/Evaluator.cairo), deployed on StarkNet, which will grant you points in the form of [ERC20 tokens](contracts/token/ERC20/TDERC20.cairo).
-
-Each exercise will require you to add functionality to your ERC721 token.
-
-For each exercise, you will have to write a new version on your contract, deploy it, and submit it to the evaluator for correction.
-
-### Where am I?
-
-This workshop is the second in a series aimed at teaching how to build on StarkNet. Checkout out the following:
 
 | Topic                                             | GitHub repo                                                                            |
 | ------------------------------------------------- | -------------------------------------------------------------------------------------- |
@@ -39,69 +35,72 @@ This workshop is the second in a series aimed at teaching how to build on StarkN
 | Debug your Cairo contracts easily                 | [StarkNet debug](https://github.com/starknet-edu/starknet-debug)                       |
 | Design your own account contract                  | [StarkNet account abstraction](https://github.com/starknet-edu/starknet-accounts)      |
 
-### Providing feedback & getting help
+### Proporcionar comentarios y obtener ayuda 
 
-Once you are done working on this tutorial, your feedback would be greatly appreciated!
+Una vez que haya terminado de trabajar en este tutorial, ¡sus comentarios serán muy apreciados!
 
-**Please fill out [this form](https://forms.reform.app/starkware/untitled-form-4/kaes2e) to let us know what we can do to make it better.**
+Complete [este formulario](https://forms.reform.app/starkware/untitled-form-4/kaes2e) para informarnos qué podemos hacer para mejorarlo. 
 
-​
-And if you struggle to move forward, do let us know! This workshop is meant to be as accessible as possible; we want to know if it's not the case.
+Y si tiene dificultades para seguir adelante, ¡háganoslo saber! Este taller está destinado a ser lo más accesible posible; queremos saber si no es el caso. 
 
-​
-Do you have a question? Join our [Discord server](https://starknet.io/discord), register, and join channel #tutorials-support
-​
-Are you interested in following online workshops about learning how to dev on StarkNet? [Subscribe here](http://eepurl.com/hFnpQ5)
+¿Tienes alguna pregunta? Únase a nuestro servidor [Discord server](https://starknet.io/discord), regístrese y únase al canal #tutorials-support. ¿Está interesado en seguir talleres en línea sobre cómo aprender a desarrollar en StarkNet? [Subscríbete aquí](http://eepurl.com/hFnpQ5)
 
-### Contributing
+### Contribuyendo 
 
-This project can be made better and will evolve as StarkNet matures. Your contributions are welcome! Here are things that you can do to help:
+Este proyecto se puede mejorar y evolucionará a medida que StarkNet madure. ¡Sus contribuciones son bienvenidas! Aquí hay cosas que puede hacer para ayudar: 
 
-- Create a branch with a translation to your language
-- Correct bugs if you find some
-- Add an explanation in the comments of the exercise if you feel it needs more explanation
-- Add exercises showcasing your favorite Cairo feature
+- Crea una sucursal con una traducción a tu idioma .
+- Corrija los errores si encuentra algunos. 
+- Agregue una explicación en los comentarios del ejercicio si cree que necesita más explicación.
+- Agregue ejercicios que muestren su característica favorita de El Cairo​.
 
-​
 
-## Getting ready to work
+## Preparándose para trabajar 
 
-### Step 1 - Clone the repo
+### Paso 1: Clonar el repositorio 
+
+- Oficial:
 
 ```bash
 git clone https://github.com/starknet-edu/starknet-erc721
 cd starknet-erc721
 ```
 
-### Step 2 - Set up your environment
+- Nadai con Soluciones:
 
-There are two ways to set up your environment on StarkNet: a local installation, or using a docker container
+```bash
+gh repo clone Nadai2010/Nadai-Cairo-721-Starknet-Edu
+cd Nadai-Cairo-721-Starknet-Edu
+```
+### Paso 2: Configure su entorno 
 
-- For Mac and Linux users, we recommend either
-- For windows users we recommend docker
+Hay dos formas de configurar su entorno en StarkNet: Una instalación local o usando un contenedor docker.
 
-For a production setup instructions we wrote [this article](https://medium.com/starknet-edu/the-ultimate-starknet-dev-environment-716724aef4a7).
+- Para usuarios de Mac y Linux, recomendamos either
+- Para usuarios de Windows recomendamos docker 
 
-#### Option A - Set up a local python environment
+Para obtener instrucciones de configuración de producción, escribimos [este artículo](https://medium.com/starknet-edu/the-ultimate-starknet-dev-environment-716724aef4a7).
 
-- Set up the environment following [these instructions](https://starknet.io/docs/quickstart.html#quickstart)
-- Install [OpenZeppelin's cairo contracts](https://github.com/OpenZeppelin/cairo-contracts).
+#### Opción A: Configurar un entorno Python local 
+
+Configure el entorno siguiendo [estas instrucciones](https://starknet.io/docs/quickstart.html#quickstart)
+- Instalar [OpenZeppelin's cairo contracts](https://github.com/OpenZeppelin/cairo-contracts).
 
 ```bash
 pip install openzeppelin-cairo-contracts
 ```
 
-#### Option B - Use a dockerized environment
+#### Opción B: Usar un entorno dockerizado
 
-- Linux and macos
+- Linux y macos
 
-for mac m1:
+Para mac m1: 
 
 ```bash
 alias cairo='docker run --rm -v "$PWD":"$PWD" -w "$PWD" shardlabs/cairo-cli:latest-arm'
 ```
 
-for amd processors
+Para amd procesadores
 
 ```bash
 alias cairo='docker run --rm -v "$PWD":"$PWD" -w "$PWD" shardlabs/cairo-cli:latest'
@@ -113,40 +112,39 @@ alias cairo='docker run --rm -v "$PWD":"$PWD" -w "$PWD" shardlabs/cairo-cli:late
 docker run --rm -it -v ${pwd}:/work --workdir /work shardlabs/cairo-cli:latest
 ```
 
-### Step 3 -Test that you are able to compile the project
+#### Paso 3: Pruebe que puede compilar el proyecto contratos de compilación
 
 ```bash
 starknet-compile contracts/Evaluator.cairo
 ```
 
-​
-​
+## Trabajando en el tutorial 
 
-## Working on the tutorial
+### Flujo de trabajo 
 
-### Workflow
+Para hacer este tutorial tendrás que interactuar con el contrato [`Evaluator.cairo`](contracts/Evaluator.cairo). Para validar un ejercicio tendrás que:
 
-To do this tutorial you will have to interact with the [`Evaluator.cairo`](contracts/Evaluator.cairo) contract. To validate an exercise you will have to
+- Leer el código del evaluador para averiguar qué se espera de su contrato 
+- Personaliza el código de tu contrato 
+- Despliéguelo en la red de prueba de StarkNet. Esto se hace usando la CLI. 
+- Registre su ejercicio para corrección, usando la función de `submit_exercise` en el evaluador. Esto se hace usando Voyager. 
+- Llame a la función correspondiente en el contrato del evaluador para corregir su ejercicio y recibir sus puntos. Esto se hace usando Voyager. 
 
-- Read the evaluator code to figure out what is expected of your contract
-- Customize your contract's code
-- Deploy it to StarkNet's testnet. This is done using the CLI.
-- Register your exercise for correction, using the `submit_exercise` function on the evaluator. This is done using Voyager.
-- Call the relevant function on the evaluator contract to get your exercise corrected and receive your points. This is done using Voyager.
+Por ejemplo para resolver el primer ejercicio el flujo de trabajo sería el siguiente: 
 
-For example to solve the first exercise the workflow would be the following:
 
 `deploy a smart contract that answers ex1` &rarr; `call submit_exercise on the evaluator providing your smart contract address` &rarr; `call ex1_test_erc721 on the evaluator contract`
 
-**Your objective is to gather as many ERC721-101 points as possible.** Please note :
+**Su objetivo es reunir tantos puntos ERC721-101 como sea posible.** Tenga en cuenta : 
 
-- The 'transfer' function of ERC721-101 has been disabled to encourage you to finish the tutorial with only one address
-- In order to receive points, the evaluator has to reach the calls to the  `distribute_point` function.
-- This repo contains an interface `IExerciseSolution.cairo`. Your ERC721 contract will have to conform to this interface in order to validate some exercises; that is, your contract needs to implement all the functions described in `IExerciseSolution.cairo`.
-- **We really recommend that your read the [`Evaluator.cairo`](contracts/Evaluator.cairo) contract in order to fully understand what's expected for each exercise**. A high level description of what is expected for each exercise is provided in this readme.
-- The Evaluator contract sometimes needs to make payments to buy your tokens. Make sure he has enough dummy tokens to do so! If not, you should get dummy tokens from the dummy tokens contract and send them to the evaluator
+- La función de 'transferencia' de ERC721-101 ha sido deshabilitada para alentarlo a terminar el tutorial con una sola dirección Para recibir puntos, el evaluador debe alcanzar las llamadas a la función distribuir_punto. 
+- Este repositorio contiene una interfaz `IExerciseSolution.cairo`. Su contrato ERC721 deberá ajustarse a esta interfaz para validar algunos ejercicios; es decir, su contrato debe implementar todas las funciones descritas en `IExerciseSolution.cairo`.
 
-### Contracts code and addresses
+- **Realmente recomendamos que lea el contrato de [`Evaluator.cairo`](contracts/Evaluator.cairo) para comprender completamente lo que se espera de cada ejercicio**. En este archivo Léame se proporciona una descripción de alto nivel de lo que se espera de cada ejercicio. 
+
+- El contrato de Evaluador a veces necesita realizar pagos para comprar sus tokens. ¡Asegúrate de que tenga suficientes fichas ficticias para hacerlo! De lo contrario, debe obtener tokens ficticios del contrato de tokens ficticios y enviarlos al evaluador.
+
+### Direcciones y contratos oficiales
 
 | Contract code                                                        | Contract on voyager                                                                                                                                                           |
 | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -155,26 +153,28 @@ For example to solve the first exercise the workflow would be the following:
 | [Dummy ERC20 token](contracts/token/ERC20/dummy_token.cairo)         | [0x52ec5de9a76623f18e38c400f763013ff0b3ff8491431d7dc0391b3478bf1f3](https://goerli.voyager.online/contract/0x52ec5de9a76623f18e38c400f763013ff0b3ff8491431d7dc0391b3478bf1f3) |
 | [Dummy ERC721 token](contracts/token/ERC721/TDERC721_metadata.cairo) | [0x4fc25c4aca3a8126f9b386f8908ffb7518bc6fefaa5c542cd538655827f8a21](https://goerli.voyager.online/contract/0x4fc25c4aca3a8126f9b386f8908ffb7518bc6fefaa5c542cd538655827f8a21)   |
 
-​
-​
+​​
 
-## Tasks list
+## Lista de tareas 
 
-Today we are creating an animal registry! Animals are bred by breeders. They can be born, die, reproduce, be sold. You will implement these features little by little.
+¡Hoy estamos creando un registro de animales! Los animales son criados por criadores. Pueden nacer, morir, reproducirse, venderse. Irás implementando estas características poco a poco. 
 
-### Exercise 1 - Deploying an ERC721
+### Ejercicio 1: Implementación de un ERC721 
 
-- Create an ERC721 token contract. You can use [this implementation](https://github.com/OpenZeppelin/cairo-contracts/blob/v0.2.1/src/openzeppelin/token/erc721/ERC721_Mintable_Burnable.cairo) as a base
-- Deploy it to the testnet (check the constructor for the needed arguments. Also note that the arguments should be decimals.)
+- Cree un contrato de token ERC721. Puedes usar [esta implementación](https://github.com/OpenZeppelin/cairo-contracts/blob/v0.2.1/src/openzeppelin/token/erc721/ERC721_Mintable_Burnable.cairo) como base.
+- Despliéguelo en la red de prueba (verifique en el constructor los argumentos necesarios. También tenga en cuenta que los argumentos deben ser decimales). 
 
 ```bash
 starknet-compile contracts/ERC721/ERC721.cairo --output artifacts/ERC721.json
 starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --network alpha-goerli 
 ```
 
-- Give token #1 to Evaluator contract
-- Call [`submit_exercise()`](contracts/Evaluator.cairo#L601) in the Evaluator to configure the contract you want evaluated (4 pts)
-- Call [`ex1_test_erc721()`](contracts/Evaluator.cairo#L146) in the evaluator to receive your points (2 pts)
+- Entrega el token n.° 1 al contrato del evaluador 
+- Llame a [`submit_exercise()`](contracts/Evaluator.cairo#L601) en el Evaluador para configurar el contrato que desea evaluar (4 pts) 
+- Llame a [`ex1_test_erc721()`](contracts/Evaluator.cairo#L146) en el evaluador para recibir sus puntos (2 pts)
+
+
+- Nadai con Soluciones [Ejercio 1](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex01.md)
 
 ### Exercise 2 - Creating token attributes
 
