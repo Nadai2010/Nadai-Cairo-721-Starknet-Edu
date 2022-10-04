@@ -174,42 +174,43 @@ starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --netwo
 - Llame a [`ex1_test_erc721()`](contracts/Evaluator.cairo#L146) en el evaluador para recibir sus puntos (2 pts)
 
 
-- Nadai con Soluciones [Ejercio 1](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex01.md)
+- **Nadai con Soluciones [Ejercio 1](https://github.com/Nadai2010/Nadai-Cairo-721-Starknet-Edu/blob/master/contracts/Soluci%C3%B3n/ERC721ex01.md)**
 
-### Exercise 2 - Creating token attributes
+### Ejercicio 2: Creación de atributos de token 
 
-- Call [`ex2a_get_animal_rank()`](contracts/Evaluator.cairo#L245) to get assigned a random creature to create.
-- Read the expected characteristics of your animal from the Evaluator
-- Create the tools necessary to record animals characteristics in your contract and enable the evaluator contract to retrieve them trough `get_animal_characteristics` function on your contract ([check this](contracts/IExerciseSolution.cairo))
-- Deploy your new contract
-- Mint the animal with the desired characteristics and give it to the evaluator
-- Call [`submit_exercise()`](contracts/Evaluator.cairo#L601) in the Evaluator to configure the contract you want evaluated
-- Call [`ex2b_test_declare_animal()`](contracts/Evaluator.cairo#L258) to receive points (2 pts)
+- Llame a [`ex2a_get_animal_rank()`](contracts/Evaluator.cairo#L245) para que le asignen una criatura aleatoria para crear. 
+- Lea las características esperadas de su animal del Evaluador 
+- Cree las herramientas necesarias para registrar las características de los animales en su contrato y permita que el contrato del evaluador las recupere a través de la función `get_animal_characteristics` en su contrato ([marque esto](contracts/IExerciseSolution.cairo)) 
+- Implementa tu nuevo contrato 
+- Acuñar el animal con las características deseadas y entregarlo al evaluador 
+- Llame [`submit_exercise()`](contracts/Evaluator.cairo#L601) en el Evaluador para configurar el contrato que desea evaluar 
+- Llame a [`ex2b_test_declare_animal()`](contracts/Evaluator.cairo#L258) para recibir puntos (2 pts)
 
-### Exercise 3 - Minting NFTs
+### Ejercicio 3: Acuñación de NFT 
 
-- Create a function to allow breeders to mint new animals with the specified characteristics
-- Deploy your new contract
-- Call [`submit_exercise()`](contracts/Evaluator.cairo#L601) in the Evaluator to configure the contract you want evaluated
-- Call [`ex3_declare_new_animal()`](contracts/Evaluator.cairo#L272) to get points (2 pts)
+- Crear una función para permitir a los criadores acuñar nuevos animales con las características especificadas 
+- Implementa tu nuevo contrato 
+- Llame a [`submit_exercise()`](contracts/Evaluator.cairo#L601) en el Evaluador para configurar el contrato que desea evaluar 
+- Llame a [`ex3_declare_new_animal()`](contracts/Evaluator.cairo#L272) para obtener puntos (2 puntos)
 
-### Exercise 4 - Burning NFTs
+### Ejercicio 4 - Quema de NFT 
 
-- Create a function to allow breeders to declare dead animals (burn the NFT)
-- Deploy your new contract
-- Call [`submit_exercise()`](contracts/Evaluator.cairo#L601) in the Evaluator to configure the contract you want evaluated
-- Call [`ex4_declare_dead_animal()`](contracts/Evaluator.cairo#L323) to get points (2 pts)
+- Cree una función para permitir que los criadores declaren animales muertos (quemar el NFT)
+- Implementa tu nuevo contrato 
+- Llame a [`submit_exercise()`](contracts/Evaluator.cairo#L601) en el Evaluador para configurar el contrato que desea evaluar 
+- Llame a [`ex4_declare_dead_animal()`](contracts/Evaluator.cairo#L323) para obtener puntos (2 puntos) 
 
-### Exercise 5 - Adding permissions and payments
+### Ejercicio 5 - Adición de permisos y pagos 
 
-- Use [dummy token faucet](contracts/token/ERC20/dummy_token.cairo) to get dummy tokens
-- Use [`ex5a_i_have_dtk()`](contracts/Evaluator.cairo#L406) to show you managed to use the faucet (2 pts)
-- Create a function to allow breeder registration.
-- This function should charge the registrant for a fee, paid in dummy tokens ([check `registration_price`](contracts/IExerciseSolution.cairo))
-- Add permissions. Only allow listed breeders should be able to create animals
-- Deploy your new contract
-- Call [`submit_exercise()`](contracts/Evaluator.cairo#L601) in the Evaluator to configure the contract you want evaluated
-- Call [`ex5b_register_breeder()`](contracts/Evaluator.cairo#L440) to prove your function works. If needed, send dummy tokens first to the evaluator (2pts)
+- Use el [dummy token faucet](contracts/token/ERC20/dummy_token.cairo) ficticias para obtener dummy token. 
+- Usa [`ex5a_i_have_dtk()`](contracts/Evaluator.cairo#L406) para mostrar que lograste usar el grifo (2 pts) 
+- Cree una función para permitir el registro de criadores. 
+- Esta función debería cobrarle al registrante una tarifa, pagada en tokens ficticios ([consulte `registration_price`](contracts/IExerciseSolution.cairo)) 
+- Agregar permisos. Solo permitir que los criadores listados puedan crear animales. 
+- Implementa tu nuevo contrato 
+- Llame a [`submit_exercise()`](contracts/Evaluator.cairo#L601) en el Evaluador para configurar el contrato que desea evaluar 
+- Llame a [`ex5b_register_breeder()`](contracts/Evaluator.cairo#L440) para probar que su función funciona. Si es necesario, envíe tokens ficticios primero al evaluador (2 puntos)
+
 
 ### Exercise 6 - Claiming an NFT
 
